@@ -50,7 +50,10 @@
         function checkPass(input) {
             var value=input.val();
             var span=input.next();
-            if(value.length!=6){
+            if(value=="" || value==null){
+                span.html("密码不能为空");
+                return false
+            }else if(value.length!=6){
                 span.html("密码必须六位数字");
                 return false
             }else{
@@ -84,10 +87,10 @@
     <div class="hd"><ul><li class="">账户登录</li><li>短信验证登录</li></ul></div>
     <div class="bd">
      <ul>
-       <form class="write_login">
+       <form class="write_login" action="">
 	     <fieldset>
 		 <ul>
-         <li class="frame_style form_error"><label class="user_icon"></label><input name="用户名/手机号/邮箱" type="text"  id="username" onchange="checkUsername($(this))"/><i>用户名/手机号/邮箱</i></li><span style="font-size: 10px;color: red"/>
+         <li class="frame_style form_error"><label class="user_icon"></label><input name="用户名/手机号/邮箱" type="text"  id="username" onchange="checkUsername($(this))"/><i>用户名/手机号/邮箱</i></li>
          <li class="frame_style form_error"><label class="password_icon"></label><input name="密码" type="password"   id="userpwd" onchange="checkPass($(this))"/><i>密码</i></li>
          </ul>
 		 <div class="space"></div>
