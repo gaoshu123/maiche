@@ -15,7 +15,7 @@
 <body>
 <div class="login_top">
  <div class="top clearfix">
-  <div class="login_logo"><a href="index.html"><img src="images/logo.png" /></a></div>
+  <div class="login_logo"><a href="../static/index.html"><img src="images/logo.png" /></a></div>
   <div class="login_title">用户登录</div>
    <div class="fw_phone">
     咨询服务热线：
@@ -43,7 +43,7 @@
           <label class="inline"><input type="checkbox" class="ace"><span class="lbl">保存密码</span></label>  
         </div>        
       <div class="space-4"><button type="button" class="width-35  btn btn-sm btn-primary" id="login_btn" onclick="">登陆</button></div> 
-      <div class="link_bz"><a href="#">忘记密码</a> | <a href="registered.html">注册账号</a></div>
+      <div class="link_bz"><a href="#">忘记密码</a> | <a href="../static/registered.html">注册账号</a></div>
        </fieldset>
       </form>
      </ul>
@@ -59,7 +59,7 @@
 		 <div class="space"></div>
                 
       <div class="space-4"><button type="button" class="width-35  btn btn-sm btn-primary" id="p_login_btn" onclick="">登陆</button></div> 
-      <div class="link_bz"><a href="#">忘记密码</a> | <a href="registered.html">注册账号</a></div>
+      <div class="link_bz"><a href="#">忘记密码</a> | <a href="../static/registered.html">注册账号</a></div>
        </fieldset>
       </form>
      </ul>
@@ -104,7 +104,7 @@ $('#login_btn').on('click', function(){
           else{
 			  layer.alert('登陆成功！',{
                title: '提示框',				
-			   icon:1,		
+			   icon:1,
 			  });
 	          location.href="index.html";
 			   layer.close(index);	
