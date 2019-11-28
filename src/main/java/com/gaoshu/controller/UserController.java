@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("login")
 public class UserController {
+    //登录
     @GetMapping
     public String login(){
         return "login";
     }
-
 }
