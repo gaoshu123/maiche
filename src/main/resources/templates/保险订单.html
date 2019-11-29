@@ -1,17 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="css/common.css" rel="stylesheet"  type="text/css" />
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<Link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<script src="js/jquery.min.1.8.2.js" type="text/javascript"></script>
-<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
-<script src="js/common_js.js" type="text/javascript"></script>
-<script src="js/footer.js" type="text/javascript"></script>
-<script src="js/cityselect.js" type="text/javascript"></script>
-<script src="js/layer/layer.js" type="text/javascript"></script>
-<script src="js/laydate/laydate.js" type="text/javascript"></script>
+<link href="../static/css/common.css" rel="stylesheet" type="text/css" />
+<link href="../static/css/style.css" rel="stylesheet" type="text/css" />
+<Link href="../static/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<script src="../static/js/jquery.min.1.8.2.js" type="text/javascript"></script>
+<script src="../static/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+<script src="../static/js/common_js.js" type="text/javascript"></script>
+<script src="../static/js/footer.js" type="text/javascript"></script>
+<script src="../static/js/cityselect.js" type="text/javascript"></script>
+<script src="../static/js/layer/layer.js" type="text/javascript"></script>
+<script src="../static/js/laydate/laydate.js" type="text/javascript"></script>
 <title>保险订单</title>
 </head>
 
@@ -23,24 +23,24 @@
     <div class="Collection"><em></em><a href="#">收藏我们</a></div>
 	<div class="hd_top_manu clearfix">
 	  <ul class="clearfix">
-	   <li class="hd_menu_tit zhuce" data-addclass="hd_menu_hover">欢迎光临本店！<a href="../templates/login.html" class="red">[请登录]</a> 新用户<a href="registered.html" class="red">[免费注册]</a></li>
+	   <li class="hd_menu_tit zhuce" data-addclass="hd_menu_hover">欢迎光临本店！<a href="login.html" class="red">[请登录]</a> 新用户<a href="../static/registered.html" class="red">[免费注册]</a></li>
 	   <li class="hd_menu_tit list_name" data-addclass="hd_menu_hover"><a href="javascript:" class="hd_menu">我的订单</a>
          <div class="hd_menu_list" style="display: none;">
 		   <ul>
-		    <li><a href="询价订单.html">询价订单</a></li>
-		    <li><a href="保险订单.html">保险订单</a></li>
-            <li><a href="购车订单.html">新车订单</a></li>
+		    <li><a href="../static/询价订单.html">询价订单</a></li>
+		    <li><a href="selectAllBaoXian.do">保险订单</a></li>
+            <li><a href="../static/购车订单.html">新车订单</a></li>
 		   </ul>
 		</div>
        </li> 
-	   <li class="hd_menu_tit" data-addclass="hd_menu_hover"> <a href="保单查询.html">保单查询</a> </li>
-	   <li class="hd_menu_tit" data-addclass="hd_menu_hover"><a href="网站地图.html">网址导航</a></li>
-	   <li class="hd_menu_tit list_name" data-addclass="hd_menu_hover"><a href="帮助中心.html" class="hd_menu">帮助中心</a>
+	   <li class="hd_menu_tit" data-addclass="hd_menu_hover"> <a href="../static/保单查询.html">保单查询</a> </li>
+	   <li class="hd_menu_tit" data-addclass="hd_menu_hover"><a href="../static/网站地图.html">网址导航</a></li>
+	   <li class="hd_menu_tit list_name" data-addclass="hd_menu_hover"><a href="../static/帮助中心.html" class="hd_menu">帮助中心</a>
 	    <div class="hd_menu_list" style="display: none;">
 		   <ul>
-		    <li><a href="帮助详细.html">常见问题</a></li>
-		    <li><a href="知识库.html">知识问答</a></li>
-            <li><a href="帮助详细.html">支付方式</a></li>
+		    <li><a href="../static/帮助详细.html">常见问题</a></li>
+		    <li><a href="../static/知识库.html">知识问答</a></li>
+            <li><a href="../static/帮助详细.html">支付方式</a></li>
             <li><a href="#">联系方式</a></li>
 			<li><a href="#">配送服务</a></li>
 		   </ul>
@@ -49,7 +49,7 @@
         <li class="hd_menu_tit phone_c" data-addclass="hd_menu_hover"><a href="#" class="hd_menu "><i class="icon_phone"></i>手机版</a>
 	    <div class="hd_menu_list erweima">
 		   <ul>
-            <img src="images/waixin.png"  width="120px" height="120"/>
+            <img src="../static/images/waixin.png" width="120px" height="120"/>
             <p>扫码关注公众号</p>
 		   </ul>
 		</div>	   
@@ -60,15 +60,15 @@
 </div>
 <!--栏目-->
 <div class="header relative clearfix">
-  <div class="logo_style"><a href="index.html"><img src="images/logo.png" /><h6 class="pingtai_name">一站式汽车综合服务平台</h6></a></div>
+  <div class="logo_style"><a href="../static/index.html"><img src="../static/images/logo.png" /><h6 class="pingtai_name">一站式汽车综合服务平台</h6></a></div>
   <div class="middle_style">
    <div class="Search">
     <p><select name="" class="select_name"><option value="1">全部</option><option value="2">保险</option><option value="3">商城</option></select><input name="搜索框" type="text" class="text" placeholder="请输入关键字"><input name="" onclick="submit_btn()" type="submit" value="搜索" class="Search_btn"></p>
-	<p class="Words">热搜关键字：<a href="搜索.html">大众</a><a href="#">宝马</a><a href="#">太平洋保险</a><a href="#">福特</a><a href="#">本田</a><a href="#">哈佛</a></p>
+	<p class="Words">热搜关键字：<a href="../static/搜索.html">大众</a><a href="#">宝马</a><a href="#">太平洋保险</a><a href="#">福特</a><a href="#">本田</a><a href="#">哈佛</a></p>
 </div>
      <ul class="menu_list">
-      <li><a href="index.html" class="menu_name">首页</a></li>
-      <li><a href="cars_list.html" class="menu_name">购车 <em class="Arrows_icon"></em></a>
+      <li><a href="../static/index.html" class="menu_name">首页</a></li>
+      <li><a href="../static/cars_list.html" class="menu_name">购车 <em class="Arrows_icon"></em></a>
        <div class="Insurance_class">
        <div class="Condition_selection_style">
        <div class="navcar clearfix">
@@ -105,49 +105,49 @@
         <ul>
          <li>
          <a href="#">
-          <img src="images/products/2.jpg"  width="80px"/>
+          <img src="../static/images/products/2.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/3.jpg"  width="80px"/>
+          <img src="../static/images/products/3.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/4.jpg"  width="80px"/>
+          <img src="../static/images/products/4.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/5.jpg"  width="80px"/>
+          <img src="../static/images/products/5.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/6.jpg"  width="80px"/>
+          <img src="../static/images/products/6.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/7.jpg"  width="80px"/>
+          <img src="../static/images/products/7.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/8.jpg"  width="80px"/>
+          <img src="../static/images/products/8.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/9.jpg"  width="80px"/>
+          <img src="../static/images/products/9.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
@@ -155,18 +155,18 @@
        </div>
        </div>
        <div class="Recommended_Brand">
-       <a href="#" class="mb15"><img src="images/ad_1.jpg"  width="100%" height="198px"/></a>
-        <a href="#"><img src="images/ad_1.jpg"  width="100%" height="198px"/></a>
+       <a href="#" class="mb15"><img src="../static/images/ad_1.jpg" width="100%" height="198px"/></a>
+        <a href="#"><img src="../static/images/ad_1.jpg" width="100%" height="198px"/></a>
        </div>
        </div>   
       </li>
       <li><a href="#" class="menu_name">车险<em class="Arrows_icon"></em></a>
        <div class="Insurance_class">
         	<div class="Insurance_class_Insurance">
-              <h3><a href="Insurance.html">太平洋保险</a></h3>
+              <h3><a href="../static/Insurance.html">太平洋保险</a></h3>
               <p class="jianjie ">又称太平洋保险，简称中国太保或太保，前身是中国太平洋保险公司，成立于1991年5月13日，是经中国人民银行批准设立的全国性股份制商业保险公司。中国太平洋保险以“做一家负责任的保险公司”为使命，以“诚信天下，稳健一生，追求卓越”为企业核心价值观，以“推动和实现可持续的价值增长”为经营理念，不断为客户、股东、员工、社会和利益相关者创造价值，为社会和谐做出贡献。</p>
              <div class="clauseBlock">
-            <img src="images/map01.jpg" width="100%" alt="">
+            <img src="../static/images/map01.jpg" width="100%" alt="">
             <ul class="clauseItemList">
             	<li>? 先赔付，再修车</li>
                 <li>? 万元以下赔付，3天到账</li>
@@ -174,7 +174,7 @@
             </ul>
         </div>
         <div class="clauseBlock">
-            <img src="images/map02.jpg" width="100%" alt="">
+            <img src="../static/images/map02.jpg" width="100%" alt="">
             <ul class="clauseItemList">
             	<li>? 7X24小时</li>
                 <li>? 百公里免费非事故</li>
@@ -182,7 +182,7 @@
             </ul>
         </div>
         <div class="clauseBlock">
-            <img src="images/map03.jpg" width="100%" alt="">
+            <img src="../static/images/map03.jpg" width="100%" alt="">
             <ul class="clauseItemList">
             	<li>? 人伤案件安心理赔</li>
                 <li>? 上门代收理赔资料</li>
@@ -228,13 +228,13 @@
        </div>
       </li>     
       
-      <li><a href="知识.html" class="menu_name">知识</a></li>
+      <li><a href="../static/知识.html" class="menu_name">知识</a></li>
       </ul>
       
-   </div><div class="contacttop_style"><img src="images/phone.png" />
+   </div><div class="contacttop_style"><img src="../static/images/phone.png" />
     <div class="header_mycount">
-     <a href="购物车.html" class="cart_style"><i class="icon_cart"></i>我的购物车<i class="ci-count">0</i></a>
-     <a href="用户中心.html" class="user_header_style">
+     <a href="../static/购物车.html" class="cart_style"><i class="icon_cart"></i>我的购物车<i class="ci-count">0</i></a>
+     <a href="../static/用户中心.html" class="user_header_style">
        <i class="icon_user"></i>我的苏车宝
      </a>
     </div>
@@ -267,8 +267,11 @@
   </tr>
  </thead>
  <tbody>
-  <tr class="order_number">
-   <td colspan="6"><span class="Numbering">订单号：</span>WE123456789098 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="time">询价时间：2017-2-12 11:12</span></td>
+
+<tr class="order_number"th:each="baoxian:${u}">
+   <td colspan="6">
+       <span class="Numbering">订单号：</span><span th:text="${baoxian.bxddid}"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <span class="time">询价时间：</span><span th:text="${baoxian.bxddsj}"></span></span></td>
   </tr>
    <tr class="Inquiry_order_content">
    <td>
@@ -281,10 +284,11 @@
    <td class="td_status">待完善</td>
    <td class="td_manage">
     <a href="#" class="btn detailed_btn mb15">查看详细</a>
-    <a href="保单认证.html" class="btn btn_huise mb15 material">完善资料</a>
+    <a href="../static/保单认证.html" class="btn btn_huise mb15 material">完善资料</a>
     <a href="javascript:" class="btn btn_orange " onclick="Close_deal(this,'123')">关闭交易</a>
    </td>
   </tr>
+
  </tbody>
   <tbody>
   <tr class="order_number">
@@ -346,28 +350,28 @@
  <div class="footerbox">
   <ul class="clearfix">
    <li class="clearfix ensure_name">
-    <div class="left_icon"><img src="images/icon_img_17.png" /></div>
+    <div class="left_icon"><img src="../static/images/icon_img_17.png" /></div>
     <div class="right_content">
      <h3>全程购物安全保障</h3>
      <h4>用户消费，资金安全</h4>
     </div>
    </li>
     <li class="clearfix ensure_name">
-    <div class="left_icon"><img src="images/icon_img_07.png" /></div>
+    <div class="left_icon"><img src="../static/images/icon_img_07.png" /></div>
     <div class="right_content">
      <h3>专业汽车销售平台</h3>
      <h4>实体汽车销售企业</h4>
     </div>
    </li>
     <li class="clearfix ensure_name">
-    <div class="left_icon"><img src="images/icon_img_09.png" /></div>
+    <div class="left_icon"><img src="../static/images/icon_img_09.png" /></div>
     <div class="right_content">
      <h3>获得相关认证授权</h3>
      <h4>保险,汽车销售许可</h4>
     </div>
    </li>
     <li class="clearfix ensure_name">
-    <div class="left_icon"><img src="images/icon_img_11.png" /></div>
+    <div class="left_icon"><img src="../static/images/icon_img_11.png" /></div>
     <div class="right_content">
      <h3>24小时服务热线</h3>
      <h4>有问题实时沟通联系</h4>
@@ -403,10 +407,10 @@
    </dl>
   </div>
   <div class="weixin_style">
-   <div class="sys_style"><img src="images/waixin.png"  width="100px"/><h5>微信公众号</h5></div>
-    <div class="sys_style"><img src="images/waixin.png"  width="100px"/><h5>微信公众号</h5></div>
+   <div class="sys_style"><img src="../static/images/waixin.png" width="100px"/><h5>微信公众号</h5></div>
+    <div class="sys_style"><img src="../static/images/waixin.png" width="100px"/><h5>微信公众号</h5></div>
   </div> 
-  <div class="footer_phone"><img src="images/phone.png" /></div> 
+  <div class="footer_phone"><img src="../static/images/phone.png" /></div>
  </div>
  <div class="Copyright">
  <div class="footerbox">
