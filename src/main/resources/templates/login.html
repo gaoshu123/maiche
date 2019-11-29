@@ -2,13 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="css/common.css" rel="stylesheet"  type="text/css" />
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<Link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<script src="js/jquery.min.1.8.2.js" type="text/javascript"></script>
-<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
-<script src="js/common_js.js" type="text/javascript"></script>
-<script src="js/footer.js" type="text/javascript"></script>
+<link href="../css/common.css" rel="stylesheet"  type="text/css" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<Link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.min.1.8.2.js" type="text/javascript"></script>
+<script src="../js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+<script src="../js/common_js.js" type="text/javascript"></script>
+<script src="../js/footer.js" type="text/javascript"></script>
 <title>用户登录</title>
     <script>
         //用户名、手机号、邮箱验证///
@@ -61,7 +61,34 @@
                 return true;
             }
         }
+        //登录验证
+        function checkFrom() {
+            var isName=checkUsername($("#username"))
+            var isPass=checkPass($("#password"))
+            if(!isName ||!isPass){
+                event.preventDefault();
+            }
+        }
+        //记住密码
+        function remember() {
+            var remFlag=$("input[type='checkbox']").is(':checked');
+            alert(remFlag)
+            if(remFlag==true){
+                var conFlag=confirm("您确定记住密码吗？")
+                if(conFlag){
+                    $("input[name='remFlag']").val("1")
+                }else{
+                    $("input[type='checkbox']").removeAttr('checked');
+                    $("#remFlag").val("");
+                }
+            }else{
+                $("#remFlag").val("");
+            }
+        }
+        $(function () {
 
+
+        })
 
 
     </script>
@@ -70,7 +97,7 @@
 <body>
 <div class="login_top">
  <div class="top clearfix">
-  <div class="login_logo"><a href="index.html"><img src="images/logo.png" /></a></div>
+  <div class="login_logo"><a href="index.html"><img src="../images/logo.png" /></a></div>
   <div class="login_title">用户登录</div>
    <div class="fw_phone">
     咨询服务热线：
@@ -81,7 +108,7 @@
 <!--登录-->
 <div class="login_content Reg_log_style">
  <div class="mian_style relative">
-  <div class="login_ad"><img src="images/login_ad.png" /></div>
+  <div class="login_ad"><img src="../images/login_ad.png" /></div>
   <div class="login_style">
    <div class="login_Switch">
     <div class="hd"><ul><li class="">账户登录</li><li>短信验证登录</li></ul></div>
@@ -92,17 +119,15 @@
 		 <ul>
          <li class="frame_style form_error"><label class="user_icon"></label><input name="username" type="text"  id="username" onchange="checkUsername($(this))"/><i>用户名/手机号/邮箱</i></li>
          <li class="frame_style form_error"><label class="password_icon"></label><input name="password" type="password"   id="password" onchange="checkPass($(this))"/><i>密码</i></li>
+         <li class="frame_style form_error"><label class="Codes_icon"></label><input name="验证码" type="text" id="Codes_text"><i>验证码</i><div class="Codes_region"></div></li>
+             <p style="color: red" align="right" th:text="${msg}"></p>
          </ul>
 		 <div class="space"></div>
          <div class="clearfix mb15 color9" >
-          <label class="inline"><input type="checkbox" class="ace"><span class="lbl">保存密码</span></label>
+          <label class="inline"><input id="saveid" name="remFlag" type="checkbox" onclick="remember()" value=""><span class="lbl">保存密码</span></label>
         </div>
-             <div class="space-4"><button type="submit" class="width-35  btn btn-sm btn-primary" id="login_btn" >登陆</button></div>
+             <div class="space-4"><button type="submit" class="width-35  btn btn-sm btn-primary" id="login_btn" onclick="checkFrom()">登陆</button></div>
       <div class="link_bz"><a href="#">忘记密码</a> | <a href="registered.html">注册账号</a></div>
-          <label class="inline"><input type="checkbox" class="ace"><span class="lbl">保存密码</span></label>
-        </div>
-      <div class="space-4"><button type="button" class="width-35  btn btn-sm btn-primary" id="login_btn" onclick="">登陆</button></div>
-      <div class="link_bz"><a href="#">忘记密码</a> | <a href="../static/registered.html">注册账号</a></div>
        </fieldset>
       </form>
      </ul>
@@ -111,17 +136,10 @@
 	     <fieldset>
 		 <ul>
          <li class="frame_style form_error"><label class="phone_icon"></label><input name="手机号" type="text"  id="phone"/><i>手机号</i></li>
-         <li class="frame_style form_error"><label class="Codes_icon"></label><input name="验证码" type="text" id="Codes_text"><i>验证码</i><div class="Codes_region"></div></li>
          <li class="frame_style form_error " id="phone_codes"><label class="phone_Codes_icon"></label><input name="手机验证码" type="text" id="phone_Codes_text"><i>手机验证码</i>
          <a class="hz-button get-code-button  btn" href="javascript:;" id="getSmsCode">发送验证码</a></li>
          </ul>
 		 <div class="space"></div>
-                
-      <div class="space-4"><button type="button" class="width-35  btn btn-sm btn-primary" id="p_login_btn" onclick="">登陆</button></div> 
-      <div class="link_bz"><a href="#">忘记密码</a> | <a href="../static/registered.html">注册账号</a></div>
-
-      <div class="space-4"><button type="button" class="width-35  btn btn-sm btn-primary" id="p_login_btn" onclick="">登陆</button></div>
-      <div class="link_bz"><a href="#">忘记密码</a> | <a href="registered.html">注册账号</a></div>
        </fieldset>
       </form>
      </ul>

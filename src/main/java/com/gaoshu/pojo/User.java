@@ -1,10 +1,22 @@
 package com.gaoshu.pojo;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
+
 /**
- * Created by Administrator on 2019/11/28.
+ * 1.实体类实现序列化
+ * 2.使用@Table指定实体类对应的表
+ * 3.属性类型改为包装类
+ * 4.使用@Id注解指定表中的主键使用@GeneratedValue(generator = "JDBC")实现主键自增仅限于mysql和sqlserver数据库
+ * 如果除主键之外的属性与数据库表的字段不一致使用@Column(name = "数据库的字段名")
  */
-public class User {
-    private int uid;
+@Table(name = "user")
+public class User implements Serializable {
+    @Id
+    @GeneratedValue(generator = "JDBC")
+    private Integer uid;
     private String password;
     private String username;
     private String realname;
@@ -19,13 +31,12 @@ public class User {
     private String sfzfmurl;
     private String jszzmurl;
     private String jszfmurl;
-    private String spcs;
 
-    public int getUid() {
+    public Integer getUid() {
         return uid;
     }
 
-    public void setUid(int uid) {
+    public void setUid(Integer uid) {
         this.uid = uid;
     }
 
@@ -141,14 +152,6 @@ public class User {
         this.jszfmurl = jszfmurl;
     }
 
-    public String getSpcs() {
-        return spcs;
-    }
-
-    public void setSpcs(String spcs) {
-        this.spcs = spcs;
-    }
-
     @Override
     public String toString() {
         return "User{" +
@@ -167,7 +170,6 @@ public class User {
                 ", sfzfmurl='" + sfzfmurl + '\'' +
                 ", jszzmurl='" + jszzmurl + '\'' +
                 ", jszfmurl='" + jszfmurl + '\'' +
-                ", spcs='" + spcs + '\'' +
                 '}';
     }
 }
