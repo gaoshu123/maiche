@@ -6,6 +6,7 @@ package com.gaoshu.pojo;
 public class User {
     private int uid;
     private String password;
+    private String username;
     private String realname;
     private String birth;
     private String sex;
@@ -34,6 +35,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getRealname() {
@@ -145,6 +154,7 @@ public class User {
         return "User{" +
                 "uid=" + uid +
                 ", password='" + password + '\'' +
+                ", username='" + username + '\'' +
                 ", realname='" + realname + '\'' +
                 ", birth='" + birth + '\'' +
                 ", sex='" + sex + '\'' +

@@ -61,6 +61,24 @@
                 return true;
             }
         }
+        //登录验证
+        function Login() {
+            alert(1)
+            var name=$("#username");
+            var password=$("#password");
+            $.ajax({
+                type:"post",
+                url:"toLogin/login",
+                dataType:"JSON",
+                data:{username:name,password:password},
+                success:function (data) {
+
+                }
+
+
+            })
+
+        }
 
 
 
@@ -87,17 +105,17 @@
     <div class="hd"><ul><li class="">账户登录</li><li>短信验证登录</li></ul></div>
     <div class="bd">
      <ul>
-       <form class="write_login" action="login/Login.do">
+       <form class="write_login" action="/toLogin/login.do" method="post">
 	     <fieldset>
 		 <ul>
-         <li class="frame_style form_error"><label class="user_icon"></label><input name="用户名/手机号/邮箱" type="text"  id="username" onchange="checkUsername($(this))"/><i>用户名/手机号/邮箱</i></li>
-         <li class="frame_style form_error"><label class="password_icon"></label><input name="密码" type="password"   id="userpwd" onchange="checkPass($(this))"/><i>密码</i></li>
+         <li class="frame_style form_error"><label class="user_icon"></label><input name="username" type="text"  id="username" onchange="checkUsername($(this))"/><i>用户名/手机号/邮箱</i></li>
+         <li class="frame_style form_error"><label class="password_icon"></label><input name="password" type="password"   id="password" onchange="checkPass($(this))"/><i>密码</i></li>
          </ul>
 		 <div class="space"></div>
          <div class="clearfix mb15 color9" >
-          <label class="inline"><input type="checkbox" class="ace"><span class="lbl">保存密码</span></label>  
-        </div>        
-      <div class="space-4"><button type="submit" class="width-35  btn btn-sm btn-primary" id="login_btn" onclick="">登陆</button></div>
+          <label class="inline"><input type="checkbox" class="ace"><span class="lbl">保存密码</span></label>
+        </div>
+             <div class="space-4"><button type="submit" class="width-35  btn btn-sm btn-primary" id="login_btn" >登陆</button></div>
       <div class="link_bz"><a href="#">忘记密码</a> | <a href="registered.html">注册账号</a></div>
        </fieldset>
       </form>
@@ -112,13 +130,13 @@
          <a class="hz-button get-code-button  btn" href="javascript:;" id="getSmsCode">发送验证码</a></li>
          </ul>
 		 <div class="space"></div>
-                
-      <div class="space-4"><button type="button" class="width-35  btn btn-sm btn-primary" id="p_login_btn" onclick="">登陆</button></div> 
+
+      <div class="space-4"><button type="button" class="width-35  btn btn-sm btn-primary" id="p_login_btn" onclick="">登陆</button></div>
       <div class="link_bz"><a href="#">忘记密码</a> | <a href="registered.html">注册账号</a></div>
        </fieldset>
       </form>
      </ul>
-    </div> 
+    </div>
     <div class="others-login-box  clearfix">
       <span class="name">使用合作网站账号登录</span>
         <div class="inline-block">
