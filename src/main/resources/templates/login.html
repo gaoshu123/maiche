@@ -61,24 +61,6 @@
                 return true;
             }
         }
-        //登录验证
-        function Login() {
-            alert(1)
-            var name=$("#username");
-            var password=$("#password");
-            $.ajax({
-                type:"post",
-                url:"toLogin/login",
-                dataType:"JSON",
-                data:{username:name,password:password},
-                success:function (data) {
-
-                }
-
-
-            })
-
-        }
 
 
 
@@ -117,6 +99,10 @@
         </div>
              <div class="space-4"><button type="submit" class="width-35  btn btn-sm btn-primary" id="login_btn" >登陆</button></div>
       <div class="link_bz"><a href="#">忘记密码</a> | <a href="registered.html">注册账号</a></div>
+          <label class="inline"><input type="checkbox" class="ace"><span class="lbl">保存密码</span></label>
+        </div>
+      <div class="space-4"><button type="button" class="width-35  btn btn-sm btn-primary" id="login_btn" onclick="">登陆</button></div>
+      <div class="link_bz"><a href="#">忘记密码</a> | <a href="../static/registered.html">注册账号</a></div>
        </fieldset>
       </form>
      </ul>
@@ -130,6 +116,9 @@
          <a class="hz-button get-code-button  btn" href="javascript:;" id="getSmsCode">发送验证码</a></li>
          </ul>
 		 <div class="space"></div>
+                
+      <div class="space-4"><button type="button" class="width-35  btn btn-sm btn-primary" id="p_login_btn" onclick="">登陆</button></div> 
+      <div class="link_bz"><a href="#">忘记密码</a> | <a href="../static/registered.html">注册账号</a></div>
 
       <div class="space-4"><button type="button" class="width-35  btn btn-sm btn-primary" id="p_login_btn" onclick="">登陆</button></div>
       <div class="link_bz"><a href="#">忘记密码</a> | <a href="registered.html">注册账号</a></div>
