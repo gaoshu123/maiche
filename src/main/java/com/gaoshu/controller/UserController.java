@@ -7,11 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 /**
- *1
+ *2222
  */
 @RequestMapping("user")
 @Controller
-@RequestMapping("login")
 public class UserController {
     @GetMapping
     public String login(){
