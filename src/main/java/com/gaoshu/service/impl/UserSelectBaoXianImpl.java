@@ -19,7 +19,7 @@ public class UserSelectBaoXianImpl implements UserSelectBaoXian {
     private BaoXianMapper bxm;
     //查询所有保险订单
     public List<BaoXianDingDan> selectAllBaoXian(){
-    System.out.println("1");
+        System.out.println("1");
         return bxm.selectAll();
     }
 

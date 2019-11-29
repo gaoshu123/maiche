@@ -3,13 +3,14 @@ package com.gaoshu.pojo;
 import lombok.Data;
 
 import javax.persistence.Table;
+import java.io.Serializable;
 
 /**
  * Created by Administrator on 2019/11/29.
  */
 @Data
 @Table(name="baoxiandingdan")
-public class BaoXianDingDan {
+public class BaoXianDingDan implements Serializable {
     private Integer bxddid;
     private String bxddzt;
     private Double bxddzj;
