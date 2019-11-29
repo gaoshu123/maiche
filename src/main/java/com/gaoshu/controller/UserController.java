@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 
+/**
+ *1
+ */
+@RequestMapping("user")
 @Controller
 @RequestMapping("login")
 public class UserController {
