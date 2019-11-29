@@ -1,16 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="css/common.css" rel="stylesheet"  type="text/css" />
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<Link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<script src="js/jquery.min.1.8.2.js" type="text/javascript"></script>
-<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
-<script src="js/common_js.js" type="text/javascript"></script>
-<script src="js/footer.js" type="text/javascript"></script>
-<script src="js/jqzoom.js" type="text/javascript"></script>
-<script src="js/layer/layer.js" type="text/javascript"></script>
+<link href="../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<Link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.min.1.8.2.js" type="text/javascript"></script>
+<script src="../js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+<script src="../js/common_js.js" type="text/javascript"></script>
+<script src="../js/footer.js" type="text/javascript"></script>
+<script src="../js/jqzoom.js" type="text/javascript"></script>
+<script src="../js/layer/layer.js" type="text/javascript"></script>
 <title>产品详细</title>
 </head>
 
@@ -22,24 +22,24 @@
     <div class="Collection"><em></em><a href="#">收藏我们</a></div>
 	<div class="hd_top_manu clearfix">
 	  <ul class="clearfix">
-	   <li class="hd_menu_tit zhuce" data-addclass="hd_menu_hover">欢迎光临本店！<a href="../templates/login.html" class="red">[请登录]</a> 新用户<a href="registered.html" class="red">[免费注册]</a></li>
+	   <li class="hd_menu_tit zhuce" data-addclass="hd_menu_hover">欢迎光临本店！<a href="login.html" class="red">[请登录]</a> 新用户<a href="../registered.html" class="red">[免费注册]</a></li>
 	   <li class="hd_menu_tit list_name" data-addclass="hd_menu_hover"><a href="javascript:" class="hd_menu">我的订单</a>
          <div class="hd_menu_list" style="display: none;">
 		   <ul>
-		    <li><a href="询价订单.html">询价订单</a></li>
-		    <li><a href="保险订单.html">保险订单</a></li>
-            <li><a href="购车订单.html">新车订单</a></li>
+		    <li><a href="../询价订单.html">询价订单</a></li>
+		    <li><a href="../保险订单.html">保险订单</a></li>
+            <li><a href="../购车订单.html">新车订单</a></li>
 		   </ul>
 		</div>
        </li> 
-	   <li class="hd_menu_tit" data-addclass="hd_menu_hover"> <a href="保单查询.html">保单查询</a> </li>
-	   <li class="hd_menu_tit" data-addclass="hd_menu_hover"><a href="网站地图.html">网址导航</a></li>
-	   <li class="hd_menu_tit list_name" data-addclass="hd_menu_hover"><a href="帮助中心.html" class="hd_menu">帮助中心</a>
+	   <li class="hd_menu_tit" data-addclass="hd_menu_hover"> <a href="../保单查询.html">保单查询</a> </li>
+	   <li class="hd_menu_tit" data-addclass="hd_menu_hover"><a href="../网站地图.html">网址导航</a></li>
+	   <li class="hd_menu_tit list_name" data-addclass="hd_menu_hover"><a href="../帮助中心.html" class="hd_menu">帮助中心</a>
 	    <div class="hd_menu_list" style="display: none;">
 		   <ul>
-		    <li><a href="帮助详细.html">常见问题</a></li>
-		    <li><a href="知识库.html">知识问答</a></li>
-            <li><a href="帮助详细.html">支付方式</a></li>
+		    <li><a href="../帮助详细.html">常见问题</a></li>
+		    <li><a href="../知识库.html">知识问答</a></li>
+            <li><a href="../帮助详细.html">支付方式</a></li>
             <li><a href="#">联系方式</a></li>
 			<li><a href="#">配送服务</a></li>
 		   </ul>
@@ -48,7 +48,7 @@
         <li class="hd_menu_tit phone_c" data-addclass="hd_menu_hover"><a href="#" class="hd_menu "><i class="icon_phone"></i>手机版</a>
 	    <div class="hd_menu_list erweima">
 		   <ul>
-            <img src="images/waixin.png"  width="120px" height="120"/>
+            <img src="../images/waixin.png" width="120px" height="120"/>
             <p>扫码关注公众号</p>
 		   </ul>
 		</div>	   
@@ -59,15 +59,15 @@
 </div>
 <!--栏目-->
 <div class="header relative clearfix">
-  <div class="logo_style"><a href="index.html"><img src="images/logo.png" /><h6 class="pingtai_name">一站式汽车综合服务平台</h6></a></div>
+  <div class="logo_style"><a href="../index.html"><img src="../images/logo.png" /><h6 class="pingtai_name">一站式汽车综合服务平台</h6></a></div>
   <div class="middle_style">
    <div class="Search">
     <p><select name="" class="select_name"><option value="1">全部</option><option value="2">保险</option><option value="3">商城</option></select><input name="搜索框" type="text" class="text" placeholder="请输入关键字"><input name="" onclick="submit_btn()" type="submit" value="搜索" class="Search_btn"></p>
-	<p class="Words">热搜关键字：<a href="搜索.html">大众</a><a href="#">宝马</a><a href="#">太平洋保险</a><a href="#">福特</a><a href="#">本田</a><a href="#">哈佛</a></p>
+	<p class="Words">热搜关键字：<a href="../搜索.html">大众</a><a href="#">宝马</a><a href="#">太平洋保险</a><a href="#">福特</a><a href="#">本田</a><a href="#">哈佛</a></p>
 </div>
      <ul class="menu_list">
-      <li><a href="index.html" class="menu_name">首页</a></li>
-      <li><a href="cars_list.html" class="menu_name">购车 <em class="Arrows_icon"></em></a>
+      <li><a href="../index.html" class="menu_name">首页</a></li>
+      <li><a href="../cars_list.html" class="menu_name">购车 <em class="Arrows_icon"></em></a>
        <div class="Insurance_class">
        <div class="Condition_selection_style">
        <div class="navcar clearfix">
@@ -104,49 +104,49 @@
         <ul>
          <li>
          <a href="#">
-          <img src="images/products/2.jpg"  width="80px"/>
+          <img src="../images/products/2.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/3.jpg"  width="80px"/>
+          <img src="../images/products/3.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/4.jpg"  width="80px"/>
+          <img src="../images/products/4.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/5.jpg"  width="80px"/>
+          <img src="../images/products/5.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/6.jpg"  width="80px"/>
+          <img src="../images/products/6.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/7.jpg"  width="80px"/>
+          <img src="../images/products/7.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/8.jpg"  width="80px"/>
+          <img src="../images/products/8.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
           <li>
          <a href="#">
-          <img src="images/products/9.jpg"  width="80px"/>
+          <img src="../images/products/9.jpg" width="80px"/>
           <h4>汽车名称</h4>
          </a>
          </li>
@@ -154,18 +154,18 @@
        </div>
        </div>
        <div class="Recommended_Brand">
-       <a href="#" class="mb15"><img src="images/ad_1.jpg"  width="100%" height="198px"/></a>
-        <a href="#"><img src="images/ad_1.jpg"  width="100%" height="198px"/></a>
+       <a href="#" class="mb15"><img src="../images/ad_1.jpg" width="100%" height="198px"/></a>
+        <a href="#"><img src="../images/ad_1.jpg" width="100%" height="198px"/></a>
        </div>
        </div>   
       </li>
       <li><a href="#" class="menu_name">车险<em class="Arrows_icon"></em></a>
        <div class="Insurance_class">
         	<div class="Insurance_class_Insurance">
-              <h3><a href="Insurance.html">太平洋保险</a></h3>
+              <h3><a href="../Insurance.html">太平洋保险</a></h3>
               <p class="jianjie ">又称太平洋保险，简称中国太保或太保，前身是中国太平洋保险公司，成立于1991年5月13日，是经中国人民银行批准设立的全国性股份制商业保险公司。中国太平洋保险以“做一家负责任的保险公司”为使命，以“诚信天下，稳健一生，追求卓越”为企业核心价值观，以“推动和实现可持续的价值增长”为经营理念，不断为客户、股东、员工、社会和利益相关者创造价值，为社会和谐做出贡献。</p>
              <div class="clauseBlock">
-            <img src="images/map01.jpg" width="100%" alt="">
+            <img src="../images/map01.jpg" width="100%" alt="">
             <ul class="clauseItemList">
             	<li>? 先赔付，再修车</li>
                 <li>? 万元以下赔付，3天到账</li>
@@ -173,7 +173,7 @@
             </ul>
         </div>
         <div class="clauseBlock">
-            <img src="images/map02.jpg" width="100%" alt="">
+            <img src="../images/map02.jpg" width="100%" alt="">
             <ul class="clauseItemList">
             	<li>? 7X24小时</li>
                 <li>? 百公里免费非事故</li>
@@ -181,7 +181,7 @@
             </ul>
         </div>
         <div class="clauseBlock">
-            <img src="images/map03.jpg" width="100%" alt="">
+            <img src="../images/map03.jpg" width="100%" alt="">
             <ul class="clauseItemList">
             	<li>? 人伤案件安心理赔</li>
                 <li>? 上门代收理赔资料</li>
@@ -227,13 +227,13 @@
        </div>
       </li>     
       
-      <li><a href="知识.html" class="menu_name">知识</a></li>
+      <li><a href="../知识.html" class="menu_name">知识</a></li>
       </ul>
       
-   </div><div class="contacttop_style"><img src="images/phone.png" />
+   </div><div class="contacttop_style"><img src="../images/phone.png" />
     <div class="header_mycount">
-     <a href="购物车.html" class="cart_style"><i class="icon_cart"></i>我的购物车<i class="ci-count">0</i></a>
-     <a href="用户中心.html" class="user_header_style">
+     <a href="../购物车.html" class="cart_style"><i class="icon_cart"></i>我的购物车<i class="ci-count">0</i></a>
+     <a href="../用户中心.html" class="user_header_style">
        <i class="icon_user"></i>我的苏车宝
      </a>
     </div>
@@ -251,18 +251,18 @@
             <div class="clearfix" id="detail_main_img">
 	 <div class="layout_wrap preview">
      <div id="vertical" class="bigImg">
-		<img src="mid/01.jpg" width="" height="" alt="" id="midimg" />
+		<img src="../mid/01.jpg" width="" height="" alt="" id="midimg" />
 		<div id="winSelector"></div>
 	</div>
      <div class="smallImg">
 		<div class="scrollbutton smallImgUp disabled">&lt;</div>
 		<div id="imageMenu">
 			<ul>
-				<li><img src="small/01.jpg" width="68" height="68" alt="汽车"/></li>
-				<li><img src="small/02.jpg" width="68" height="68" alt="汽车"/></li>
-				<li><img src="small/03.jpg" width="68" height="68" alt="汽车"/></li>
-				<li><img src="small/04.jpg" width="68" height="68" alt="汽车"/></li>
-				<li><img src="small/05.jpg" width="68" height="68" alt="汽车"/></li>
+				<li><img src="../small/01.jpg" width="68" height="68" alt="汽车"/></li>
+				<li><img src="../small/02.jpg" width="68" height="68" alt="汽车"/></li>
+				<li><img src="../small/03.jpg" width="68" height="68" alt="汽车"/></li>
+				<li><img src="../small/04.jpg" width="68" height="68" alt="汽车"/></li>
+				<li><img src="../small/05.jpg" width="68" height="68" alt="汽车"/></li>
 			</ul>
 		</div>
 		<div class="scrollbutton smallImgDown">&gt;</div>
@@ -349,7 +349,7 @@
       <!--品牌-->
        <div class="car_Brand_style">
        <div class="title_name">销售品牌</div>
-        <div class="logo_Brand"><img src="images/logo/t01bf092c2732957cc2.jpg"  width="120px" height="100px"/></div>
+        <div class="logo_Brand"><img src="../images/logo/t01bf092c2732957cc2.jpg" width="120px" height="100px"/></div>
         <div class="xs_species">种类：6</div>
        </div>
        <!--其他汽车-->
@@ -359,7 +359,7 @@
            <li class="gl-item Brand_car_list">
 	<div class="Borders">
 <!--     <span class="car_Origin">进口车</span>-->
-	 <div class="img"><a href="#"><img src="images/products/2.jpg" style="width:220px;height:165px"></a></div>
+	 <div class="img"><a href="#"><img src="../images/products/2.jpg" style="width:220px;height:165px"></a></div>
 	 <div class="Price"><em>￥</em><b>32.29万</b><span>40.34万</span></div>
 	 <div class="name"><a href="#" title="【苏车宝自营】Mustang（野马）2016款 2.3T美规自动挡标配">【车商城自营】Mustang（野马）2016款 2.3T美规自动挡标配</a></div>
      <div class="carbox-tip" title="车商城自营现车，可提供3年或10万公里整车质保，4S店支持维修保养，订金：4999元。">车商城自营现车，可提供3年或10万公里整车质保，4S店支持维修保养，订金：4999元。</div>
@@ -368,7 +368,7 @@
 	</li>
      <li class="gl-item Brand_car_list">
 	<div class="Borders">
-	 <div class="img"><a href="#"><img src="images/products/4.jpg" style="width:220px;height:165px"></a></div>
+	 <div class="img"><a href="#"><img src="../images/products/4.jpg" style="width:220px;height:165px"></a></div>
 	 <div class="Price"><em>￥</em><b>32.29万</b><span>40.34万</span></div>
 	 <div class="name"><a href="#" title="【苏车宝自营】Mustang（野马）2016款 2.3T美规自动挡标配">【车商城自营】Mustang（野马）2016款 2.3T美规自动挡标配</a></div>
      <div class="carbox-tip" title="车商城自营现车，可提供3年或10万公里整车质保，4S店支持维修保养，订金：4999元。">车商城自营现车，可提供3年或10万公里整车质保，4S店支持维修保养，订金：4999元。</div>
@@ -377,7 +377,7 @@
 	</li>
        <li class="gl-item Brand_car_list">
 	<div class="Borders">
-	 <div class="img"><a href="#"><img src="images/products/5.jpg" style="width:220px;height:165px"></a></div>
+	 <div class="img"><a href="#"><img src="../images/products/5.jpg" style="width:220px;height:165px"></a></div>
 	 <div class="Price"><em>￥</em><b>32.29万</b><span>40.34万</span></div>
 	 <div class="name"><a href="#" title="【苏车宝自营】Mustang（野马）2016款 2.3T美规自动挡标配">【车商城自营】Mustang（野马）2016款 2.3T美规自动挡标配</a></div>
      <div class="carbox-tip" title="车商城自营现车，可提供3年或10万公里整车质保，4S店支持维修保养，订金：4999元。">车商城自营现车，可提供3年或10万公里整车质保，4S店支持维修保养，订金：4999元。</div>
@@ -386,7 +386,7 @@
 	</li>
        <li class="gl-item Brand_car_list">
 	<div class="Borders">
-	 <div class="img"><a href="#"><img src="images/products/6.jpg" style="width:220px;height:165px"></a></div>
+	 <div class="img"><a href="#"><img src="../images/products/6.jpg" style="width:220px;height:165px"></a></div>
 	 <div class="Price"><em>￥</em><b>32.29万</b><span>40.34万</span></div>
 	 <div class="name"><a href="#" title="【苏车宝自营】Mustang（野马）2016款 2.3T美规自动挡标配">【车商城自营】Mustang（野马）2016款 2.3T美规自动挡标配</a></div>
      <div class="carbox-tip" title="车商城自营现车，可提供3年或10万公里整车质保，4S店支持维修保养，订金：4999元。">车商城自营现车，可提供3年或10万公里整车质保，4S店支持维修保养，订金：4999元。</div>
@@ -414,7 +414,7 @@
 	 </div>	  
 	</div>
     <div class="info_style bd">
-     <ul><p><img src="images/11121.jpg" /></p></ul>
+     <ul><p><img src="../images/11121.jpg" /></p></ul>
      <ul>
        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="parameter_style">
     <tbody>
@@ -756,28 +756,28 @@
  <div class="footerbox">
   <ul class="clearfix">
    <li class="clearfix ensure_name">
-    <div class="left_icon"><img src="images/icon_img_17.png" /></div>
+    <div class="left_icon"><img src="../images/icon_img_17.png" /></div>
     <div class="right_content">
      <h3>全程购物安全保障</h3>
      <h4>用户消费，资金安全</h4>
     </div>
    </li>
     <li class="clearfix ensure_name">
-    <div class="left_icon"><img src="images/icon_img_07.png" /></div>
+    <div class="left_icon"><img src="../images/icon_img_07.png" /></div>
     <div class="right_content">
      <h3>专业汽车销售平台</h3>
      <h4>实体汽车销售企业</h4>
     </div>
    </li>
     <li class="clearfix ensure_name">
-    <div class="left_icon"><img src="images/icon_img_09.png" /></div>
+    <div class="left_icon"><img src="../images/icon_img_09.png" /></div>
     <div class="right_content">
      <h3>获得相关认真授权</h3>
      <h4>保险,汽车销售许可</h4>
     </div>
    </li>
     <li class="clearfix ensure_name">
-    <div class="left_icon"><img src="images/icon_img_11.png" /></div>
+    <div class="left_icon"><img src="../images/icon_img_11.png" /></div>
     <div class="right_content">
      <h3>24小时服务热线</h3>
      <h4>有问题实时沟通联系</h4>
@@ -815,10 +815,10 @@
    </dl>
   </div>
   <div class="weixin_style">
-   <div class="sys_style"><img src="images/waixin.png"  width="100px"/><h5>微信公众号</h5></div>
-    <div class="sys_style"><img src="images/waixin.png"  width="100px"/><h5>微信公众号</h5></div>
+   <div class="sys_style"><img src="../images/waixin.png" width="100px"/><h5>微信公众号</h5></div>
+    <div class="sys_style"><img src="../images/waixin.png" width="100px"/><h5>微信公众号</h5></div>
   </div> 
-  <div class="footer_phone"><img src="images/phone.png" /></div> 
+  <div class="footer_phone"><img src="../images/phone.png" /></div>
  </div>
  <div class="Copyright">
  <div class="footerbox">
@@ -837,7 +837,7 @@
       <div class="ServiceBox">
         <div class="bjfff"></div>
         	        		        <dl onclick="javascript:;">
-		          <dt><img src="images/Service1.png" width="70px"></dt>
+		          <dt><img src="../images/Service1.png" width="70px"></dt>
 		          <dd> <strong>QQ客服1</strong>
 		            <p class="p1">9:00-22:00</p>
 		            <p class="p2"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=123456&amp;site=DGG三端同步&amp;menu=yes">点击交谈</a></p>
@@ -849,8 +849,8 @@
 			<span class="fixeBoxSpan"></span> <strong>微信</strong>
            
 			<div class="cartBox"> <div class="bjfff"></div>
-       		<img src="images/waixin.png"  width="140px"/> <h4 style=" margin:10px 0px; color:#666; font-weight:normal">苏车宝微信公众号</h4></div></li>
-    <li class="fixeBoxLi Home"> <a href="index.html"> <span class="fixeBoxSpan"></span> <strong>返回首页</strong> </a> </li>
+       		<img src="../images/waixin.png" width="140px"/> <h4 style=" margin:10px 0px; color:#666; font-weight:normal">苏车宝微信公众号</h4></div></li>
+    <li class="fixeBoxLi Home"> <a href="../index.html"> <span class="fixeBoxSpan"></span> <strong>返回首页</strong> </a> </li>
     <li class="fixeBoxLi BackToTop"> <span class="fixeBoxSpan"></span> <strong>返回顶部</strong> </li>
   </ul>
 </div>
@@ -858,12 +858,12 @@
 <div class="Purchase_tips none" id="Purchase_tips">
  <div class="margin Purchase_tips_style">
    本次需支付定金<b>999元</b>确认请点击继续。
-   <p class="Purchase_checkbox"><label class="inline"><input type="checkbox" class="ace" id="checkid"><span class="lbl">请确认并已读相关<a href="协议.html" target="_blank">协议</a></span></label></p>
+   <p class="Purchase_checkbox"><label class="inline"><input type="checkbox" class="ace" id="checkid"><span class="lbl">请确认并已读相关<a href="../协议.html" target="_blank">协议</a></span></label></p>
  </div>
 </div>
 <!---->
 <div class="none Shopping_cart_tips" id="Shopping_cart_tips">
- <img src="images/success.png" />
+ <img src="../images/success.png" />
  <h4>加入购物车成功</h4>
 </div>
 </body>
