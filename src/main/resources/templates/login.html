@@ -71,24 +71,20 @@
         }
         //记住密码
         function remember() {
-            var remFlag=$("input[type='checkbox']").is(':checked');
+            var remFlag = $("input[type='checkbox']").is(':checked');
             alert(remFlag)
-            if(remFlag==true){
-                var conFlag=confirm("您确定记住密码吗？")
-                if(conFlag){
+            if (remFlag == true) {
+                var conFlag = confirm("您确定记住密码吗？")
+                if (conFlag) {
                     $("input[name='remFlag']").val("1")
-                }else{
+                } else {
                     $("input[type='checkbox']").removeAttr('checked');
                     $("#remFlag").val("");
                 }
-            }else{
+            } else {
                 $("#remFlag").val("");
             }
         }
-        $(function () {
-
-
-        })
 
 
     </script>

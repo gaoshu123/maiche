@@ -19,12 +19,20 @@ public class UserController {
     private UserService userService;
     //登录
     @RequestMapping
-    public String login(){
+    public String login(HttpServletRequest request){
+        Cookie[] cookies=request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie:cookies) {
+                String username=cookie.getUsername();
+                System.out.println(username);
+            }
+
+        }
         return "login";
     }
     //登录验证
     @RequestMapping("/login.do")
-    public String Login(Model model, User user, String remFlag, HttpSession session){
+    public String Login(Model model, User user, String remFlag, HttpSession session,HttpServletRequest request,HttpServletResponse response){
         User us=userService.Login(user);
         if(us==null){
             model.addAttribute("msg","用户名或密码错误");
@@ -34,7 +42,8 @@ public class UserController {
                 String remember=us.getUsername()+","+us.getPassword();
                 Cookie userCookie=new Cookie("remember",remember);
                 userCookie.setMaxAge(7*24*60*60);
-                model.addAttribute("cookie",userCookie);
+                cookie.setPath(request.getContextPath());
+                response.addCookie(userCookie);
             }
         }
         session.setAttribute("user",us);
