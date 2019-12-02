@@ -6,9 +6,11 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
+
 @Data
 @Table(name = "qichetupian")
-public class QiCheTuPian {
+public class QiCheTuPian  implements Serializable {
     @Id
     @GeneratedValue(generator = "JDBC")
 

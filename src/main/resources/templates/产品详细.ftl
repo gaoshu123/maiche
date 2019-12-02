@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns:th="http://www.thymeleaf.org">
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/common.css" rel="stylesheet" type="text/css" />
@@ -22,7 +23,7 @@
     <div class="Collection"><em></em><a href="#">收藏我们</a></div>
 	<div class="hd_top_manu clearfix">
 	  <ul class="clearfix">
-	   <li class="hd_menu_tit zhuce" data-addclass="hd_menu_hover">欢迎光临本店！<a href="login.html" class="red">[请登录]</a> 新用户<a href="../registered.html" class="red">[免费注册]</a></li>
+	   <li class="hd_menu_tit zhuce" data-addclass="hd_menu_hover">欢迎光临本店！<a href="login.ftl" class="red">[请登录]</a> 新用户<a href="../registered.html" class="red">[免费注册]</a></li>
 	   <li class="hd_menu_tit list_name" data-addclass="hd_menu_hover"><a href="javascript:" class="hd_menu">我的订单</a>
          <div class="hd_menu_list" style="display: none;">
 		   <ul>
@@ -258,6 +259,9 @@
 		<div class="scrollbutton smallImgUp disabled">&lt;</div>
 		<div id="imageMenu">
 			<ul>
+                <#list slides as slide>
+                    <li><img src="../img/${slide}" width="68" height="68" alt="汽车"/></li>
+                </#list>
 				<li><img src="../small/01.jpg" width="68" height="68" alt="汽车"/></li>
 				<li><img src="../small/02.jpg" width="68" height="68" alt="汽车"/></li>
 				<li><img src="../small/03.jpg" width="68" height="68" alt="汽车"/></li>
@@ -274,41 +278,43 @@
       <!--右侧内容-->
       <div class="right_cars_content">
         <div class="Product_title">
-         <h2>广汽传祺 传祺GS4 2017款 235T 自动两驱豪华智联版</h2>
-         <h5>【首付仅需1.4万，月供最低至666元】360度全车影像，运动型时尚外观1.5T 152马力 L4，5门5座SUV #订金99，24小时支付有效#</h5>
+         <h2 >${ppxh.pp+'  '+ppxh.mc+'  '+ppxh.xh+'  '+ppxh.cx}</h2><!--广汽传祺 传祺GS4 2017款 235T 自动两驱豪华智联版-->
+         <h5 ${ppxh.ms}</h5>
+            <!--【首付仅需1.4万，月供最低至666元】360度全车影像，运动型时尚外观1.5T 152马力 L4，5门5座SUV #订金99，24小时支付有效#-->
         </div>
         <div class="cars_price">
          <dl>
-         <dt>一口价：</dt>
-         <dd><em>￥</em><b>12.4</b><em>万</em></dd>
+         <dt >一口价：</dt>
+         <dd><em>￥</em><b >${ppxh.lcj}</b><em>万</em></dd>
          <dd class="Guide_price">
-         <a href="javascirpt:" class="Landing_price" id="Landing_price">总价:&nbsp;<span>14.35万 <span class="iconDetail"></span><em class="bg_color"></em></span>
+         <a href="javascirpt:" class="Landing_price" id="Landing_price">总价:&nbsp;<span >${ppxh.lcj+'万'} <span class="iconDetail"></span><em class="bg_color"></em></span>
          <div class="Landing_price_style">
           <p>裸车价：<b>12.4万</b></p>
           <p>购置税：<b>1.4万</b></p>
           <p>上牌费：<b>200元</b></p>
           <p>消费税：<b>3240元</b></p>
-          <p>出库费：<b>0元</b></p>
+          <p>出库费：<b >${ppxh.ckf}元</b></p>
          </div>
          </a>
          </dd>
          </dl>
-         <div class="inventory"><p>库存</p><b>234</b></div>
+         <div class="inventory"><p>库存${ppxh.kc}</p><b></b></div>
         </div>
         <!--基本参数-->
         <div class="clearfix margin productDL ">
          <dl><dt>指导价:</dt><dd>￥15.45万</dd></dl>
          <dl><dt>配送方式:</dt><dd>自提</dd></dl>
          <dl><dt>车身颜色:</dt><dd>
-           <div class="item  selected"><b></b><a href="#none" title="红色" class="">红色</a></div> 
-           <div class="item"><b></b><a href="#none" title="白色" class="">白色</a></div>
-           <div class="item"><b></b><a href="#none" title="蓝色" class="">蓝色</a></div>
-           <div class="item"><b></b><a href="#none" title="灰色" class="">灰色</a></div>
+           <div name="carcolor" class="item" value="1" onclick="javasrcipt:chooseCarColor(this)"><b></b><a href="#none" title="红色" class="">红色</a></div>
+           <div name="carcolor" class="item" value="2" onclick="javasrcipt:chooseCarColor(this)"><b></b><a href="#none" title="白色" class="">白色</a></div>
+           <div name="carcolor" class="item" value="3" onclick="javasrcipt:chooseCarColor(this)"><b></b><a href="#none" title="蓝色" class="">蓝色</a></div>
+           <div name="carcolor" class="item" value="4" onclick="javasrcipt:chooseCarColor(this)"><b></b><a href="#none" title="灰色" class="">灰色</a></div>
           </dd></dl>
-         <dl><dt>选择内饰:</dt><dd> <div class="item  selected"><b></b><a href="#none" title="红色" class="">红色</a></div> 
-           <div class="item"><b></b><a href="#none" title="白色" class="">白色</a></div>
-           <div class="item"><b></b><a href="#none" title="蓝色" class="">蓝色</a></div>
-           <div class="item"><b></b><a href="#none" title="灰色" class="">灰色</a></div></dd></dl>
+         <dl><dt>选择内饰:</dt><dd>
+           <div name="innercolor" class="item" value="1" onclick="javasrcipt:chooseInnerColor(this)"><b></b><a href="#none" title="红色" class="">红色</a></div>
+           <div name="innercolor" class="item" value="2" onclick="javasrcipt:chooseInnerColor(this)"><b></b><a href="#none" title="白色" class="">白色</a></div>
+           <div name="innercolor" class="item" value="3" onclick="javasrcipt:chooseInnerColor(this)"><b></b><a href="#none" title="蓝色" class="">蓝色</a></div>
+           <div name="innercolor" class="item" value="4" onclick="javasrcipt:chooseInnerColor(this)"><b></b><a href="#none" title="灰色" class="">灰色</a></div></dd></dl>
         </div>
         <!---->
         <div class="btn_operating">
@@ -414,7 +420,12 @@
 	 </div>	  
 	</div>
     <div class="info_style bd">
-     <ul><p><img src="../images/11121.jpg" /></p></ul>
+     <ul
+        <#list infos as info>
+            <p><img src="../img/${info}" /></p>
+        </#list>
+        <p><img src="../images/11121.jpg" /></p>
+      </ul>
      <ul>
        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="parameter_style">
     <tbody>
@@ -561,39 +572,39 @@
         </tr>
         <tr>
             <td class="lable_name">真皮方向盘</td>
-            <td>●</td>
+            <td><#if nbpz.zpfxp==1>●<#else>○</#if></td>
         </tr>
         <tr>
             <td class="lable_names">方向盘调节</td>
-            <td>—</td>
+            <td>${nbpz.fxptj}</td>
         </tr>
         <tr>
             <td class="lable_name">多功能方向盘</td>
-            <td>●</td>
+            <td><#if nbpz.dgnfxp==1>●<#else>○</#if></td>
         </tr>
         <tr>
             <td class="lable_names">定速巡航</td>
-            <td>●</td>
+            <td><#if nbpz.dsxh==1>●<#else>○</#if></td>
         </tr>
         <tr>
             <td class="lable_name">前/后驻车雷达</td>
-            <td>●</td>
+            <td><#if nbpz.ld==1>前驻车雷达<#elseif nbpz.ld==2>前驻车雷达+后驻车雷达<#else>后驻车雷达</#if></td>
         </tr>
         <tr>
             <td class="lable_names">倒车视频影像</td>
-            <td>○</td>
+            <td><#if nbpz.spyx==1>●<#else>○</#if></td>
         </tr>
         <tr>
             <td class="lable_name">真皮/仿皮座椅</td>
-            <td>●</td>
+            <td><#if nbpz.zy==1>●<#else>○</#if></td>
         </tr>
         <tr>
             <td class="lable_names">GPS导航系统</td>
-            <td>○</td>
+            <td><#if nbpz.gps==1>●<#else>○</#if></td>
         </tr>
         <tr>
             <td class="lable_name">自动空调</td>
-            <td>●</td>
+            <td><#if nbpz.zdkt==1>●<#else>○</#if></td>
         </tr>
         <tr>
             <th colspan="2">多媒体配置</th>
@@ -739,6 +750,7 @@
 		  $(this).addClass('active');
 		  $('.CommentText').eq($(this).index()).css({display:'block'});
 		});
+
 		</script>
     </div>
      </ul>    
@@ -914,4 +926,24 @@ function shopping_cart_btn(){
 	 })
 	
 }
+    function chooseCarColor(item){
+    var value=item.getAttribute("value");
+    console.log(value);
+    var carColors=item.parentNode.children;
+    for(var i=0;i<carColors.length;i++){
+        carColors[i].setAttribute("class","item");
+    }
+    item.setAttribute("class","item selected");
+    }
+ function chooseInnerColor(item){
+     var value=item.getAttribute("value");
+     var innerColors=item.parentNode.children;
+     for(var i=0;i<innerColors.length;i++){
+         innerColors[i].setAttribute("class","item");
+     }
+     item.setAttribute("class","item selected");
+     console.log(value);
+ }
+
 </script>
+

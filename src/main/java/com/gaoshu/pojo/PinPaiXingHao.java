@@ -52,7 +52,7 @@ public class PinPaiXingHao implements Serializable {
     private Integer nsysid;//内饰颜色id
     private Double dj;//定金
     private Double lcj;//定金
-    private Integer kcm;//库存
+    private Integer kc;//库存
     private Integer xl;		//销量
     private Double zgs;		//置购税
     private Double spf;	//上牌费
@@ -83,7 +83,7 @@ public class PinPaiXingHao implements Serializable {
         this.nsysid = nsysid;
         this.dj = dj;
         this.lcj = lcj;
-        this.kcm = kcm;
+        this.kc = kc;
         this.xl = xl;
         this.zgs = zgs;
         this.spf = spf;
@@ -114,7 +114,7 @@ public class PinPaiXingHao implements Serializable {
                 ", nsysid=" + nsysid +
                 ", dj=" + dj +
                 ", lcj=" + lcj +
-                ", kcm=" + kcm +
+                ", kc=" + kc +
                 ", xl=" + xl +
                 ", zgs=" + zgs +
                 ", spf=" + spf +
