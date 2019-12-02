@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -68,11 +68,11 @@
 
 
         <!-- 使用redis第一步-->
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-redis</artifactId>
             <version>1.3.1.RELEASE</version>
-        </dependency>-->
+        </dependency>
 
         <!-- lombok的依赖jar -->
         <dependency>
@@ -82,11 +82,15 @@
             <scope>provided</scope>
         </dependency>
 
+
+
         <!-- 引入freeMarker的依赖包. -->
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
-        </dependency>-->
+        </dependency>
+
+
 
 
         <!--热部署 作用:不用老重启服务器，可以直接更新内容-->
@@ -98,10 +102,10 @@
 
 
         <!-- 引入thymeleaf模板依赖-->
-        <dependency>
+       <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
+        </dependency>-->
 
 
 
