@@ -1,0 +1,46 @@
+Index: src/main/java/com/gaoshu/service/UserService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/gaoshu/service/UserService.java	(date 1575278195390)
++++ src/main/java/com/gaoshu/service/UserService.java	(date 1575278195390)
+@@ -0,0 +1,14 @@
++package com.gaoshu.Service;
++
++
++import com.gaoshu.pojo.User;
++
++public interface UserService {
++    /**
++     * 用户登录
++     * @param user
++     * @return
++     */
++    public User Login(User user);
++
++}
+Index: src/main/java/com/gaoshu/pojo/baoxiandingdan.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/gaoshu/pojo/baoxiandingdan.java	(date 1575278195391)
++++ src/main/java/com/gaoshu/pojo/baoxiandingdan.java	(date 1575278195391)
+@@ -0,0 +1,16 @@
++package com.gaoshu.pojo;
++
++import lombok.Data;
++
++/**
++ * Created by Administrator on 2019/11/29.
++ */
++@Data
++public class baoxiandingdan {
++    private Integer bxddid;
++    private String bxddzt;
++    private Double bxddzj;
++    private String bxddsj;
++    private Integer uid;
++
++}
