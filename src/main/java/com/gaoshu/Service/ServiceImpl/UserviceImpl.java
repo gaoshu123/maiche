@@ -19,4 +19,32 @@ public class UserviceImpl implements UserService {
         return userMapper.selectOne(user);
     }
 
+    /**
+     * 根据验证码登录
+     * @param user
+     * @return
+     */
+    public User PhoneLogin(User user){
+        return userMapper.selectOne(user);
+    }
+
+    /**
+     * 注册
+     * @param user
+     * @return
+     */
+    public int registeredUser(User user){
+        return userMapper.insert(user);
+    }
+
+    /**
+     * 找回密码
+     * @param
+     * @return
+     */
+    public int findPassword(String password,String mobile){
+        return  userMapper.findPassword(password,mobile);
+
+    }
+
 }

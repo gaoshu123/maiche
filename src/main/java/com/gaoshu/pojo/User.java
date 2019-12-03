@@ -32,7 +32,7 @@ public class User implements Serializable {
     private String jszzmurl;
     private String jszfmurl;
 
-    public Integer getUid() {
+    public int getUid() {
         return uid;
     }
 

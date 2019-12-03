@@ -1,0 +1,46 @@
+﻿#服务器端口号
+server:
+  port: 8088
+#数据源
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://121.199.202.220:3306/qichebaoxian
+    username: user6
+    password: User123456
+
+# 配置FreeMarker
+  freemarker:
+    charset: utf-8
+    cache: false
+    suffix: .ftl
+    content-type: text/html
+    template-loader-path: classpath:/templates
+    settings.classic_compatible: true
+
+#别名定义
+mybatis:
+  type-aliases-package: com.gaoshu.pojo
+
+
+
+
+#redis支持的5种存储类型:String(字符串),hash(哈希),list(列表),set(集合),zset(有序集合)
+#整合redis第二步
+#指定redis服务器的IP地址
+#spring.redis.host=192.168.222.33
+#指定redis服务器的端口号
+#spring.redis.port=6379
+
+
+#配置Thymeleaf模板参数
+#spring.thymeleaf.cache= false
+#spring.thymeleaf.mode= HTML5
+#spring.thymeleaf.encoding= UTF-8
+#spring.thymeleaf.prefix= classpath:/templates/
+#spring.thymeleaf.suffix= .html
+#spring.thymeleaf.servlet.content-type= text/html
+
+
+
