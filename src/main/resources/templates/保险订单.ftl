@@ -305,22 +305,28 @@
               </#list>
     <h5>车主:${users.realname}</h5>
    </td>
+
    <td>${bxgs.gsmc}</td>
+
+   <td style="height:50px ;width: 70px;">
        <#list xz as x>
-   <td>${x.xzmc}</td>
+           ${x.xzmc}
        </#list>
-       <#list u as baoxian>
+       </td>
+
+
+       <#--<#list u as baoxian>-->
    <td class="bx_price" >${baoxian.bxddzj?c}</td>
    <td>${baoxian.bxddzt}</td>
-       </#list >
+       <#--</#list >-->
    <td>
     <a href="selectBaoDan.do?bxddid=${baoxian.bxddid?c}" class="btn detailed_btn mb15">查看详细</a>
+    <a href="保单认证.html" class="btn btn_huise mb15 material">完善资料</a>
     <a href="#" class="btn btn_red">立即支付</a>
+
+   <#-- <a href="javascript:" class="btn btn_orange " onclick="Close_deal(this,'123')">关闭交易</a>-->
    </td>
   </tr>
-
-
-
   </#list>
  </tbody>
   <!--<tbody>

@@ -252,42 +252,72 @@
 <div class="Query_results_style user_Policy_info" >
  <div class="Query_results margin">
    <div class="prompt clearfix"><b>太平洋保单信息</b></div>
+
    <div class="clearfix">
-    <div class="order_number">订单号：5645645654645645</div>   
+    <div class="order_number">订单号：${nb.bxddid?c}</div>
     <ul class="Query_results_content clearfix">
-     <li><label class="label_name">投保城市：</label><span class="jt_content">江苏省南京市</span></li>
-     <li><label class="label_name">保险公司：</label><span class="jt_content">太平洋保险</span></li>
-     <li><label class="label_name">车牌号：</label><span class="jt_content">苏A 12531</span></li>
+     <li><label class="label_name">投保城市：</label><span class="jt_content">${nb.tbcs}</span></li>
+     <li><label class="label_name">保险公司：</label><span class="jt_content">${nb.gsmc}</span></li>
+     <li><label class="label_name">车牌号：</label><span class="jt_content">${nb.cph}</span></li>
     </ul>
     <div class="Query_results_title">车主信息</div>
     <ul class="Query_results_content clearfix">
-     <li class="width20"><label class="label_name">车主姓名：</label><span class="jt_content">张小泉</span></li>
-     <li><label class="label_name">手机号：</label><span class="jt_content">18923456789</span></li>
-     <li><label class="label_name">身份证：</label><span class="jt_content">32064545334534543543</span></li>
-     <li><label class="label_name">邮箱：</label><span class="jt_content">5436456546@qq.com</span></li>
+     <li class="width20"><label class="label_name">车主姓名：</label><span class="jt_content">${nb.realname}</span></li>
+     <li><label class="label_name">手机号：</label><span class="jt_content">${nb.mobile}</span></li>
+     <li><label class="label_name">身份证：</label><span class="jt_content">${nb.sfzh}</span></li>
+     <li><label class="label_name">邮箱：</label><span class="jt_content">${nb.email}</span></li>
     </ul>
      <div class="Query_results_title">车辆信息</div>
      <ul class="Query_results_content clearfix">
-     <li class="width100"><label class="label_name">品牌型号：</label><span class="jt_content">广汽传祺 传祺GS4 2017款 235T</span></li>
-     <li><label class="label_name">投保城市：</label><span class="jt_content">江苏省南京市</span></li>
-     <li><label class="label_name">保险公司：</label><span class="jt_content">太平洋保险</span></li>
-     <li><label class="label_name">车牌号：</label><span class="jt_content">苏A 12531</span></li>
-     <li><label class="label_name">车辆所属：</label><span class="jt_content">个人</span></li>
-     <li><label class="label_name">注册登记：</label><span class="jt_content">2014-3-4</span></li>
-     <li><label class="label_name">车辆识别码：</label><span class="jt_content">	GFDD34334DF345</span></li>
-     <li><label class="label_name">发动机号：</label><span class="jt_content">123445434543</span></li>
-     <li><label class="label_name">车辆类型：</label><span class="jt_content">轿车</span></li>
-     <li><label class="label_name">燃油类型：</label><span class="jt_content">汽油</span></li>
-     <li><label class="label_name">上证城市：</label><span class="jt_content">北京市</span></li>
-     <li><label class="label_name">是否过户：</label><span class="jt_content">否</span></li>
+     <li class="width100"><label class="label_name">品牌型号：</label><span class="jt_content">${nb.pp}${nb.mc}${nb.xh}${nb.cx}</span></li>
+     <li><label class="label_name">投保城市：</label><span class="jt_content">${nb.tbcs}</span></li>
+     <li><label class="label_name">保险公司：</label><span class="jt_content">${nb.gsmc}</span></li>
+     <li><label class="label_name">车牌号：</label><span class="jt_content">${nb.cph}</span></li>
+     <li><label class="label_name">车辆所属：</label><span class="jt_content">${nb.clss}</span></li>
+     <li><label class="label_name">注册登记：</label><span class="jt_content">${nb.zcrq}</span></li>
+     <li><label class="label_name">车辆识别码：</label><span class="jt_content">${nb.clsbm}</span></li>
+     <li><label class="label_name">发动机号：</label><span class="jt_content">${nb.fdjh}</span></li>
+     <li><label class="label_name">车辆类型：</label><span class="jt_content">${nb.cllx}</span></li>
+     <li><label class="label_name">燃油类型：</label><span class="jt_content">${nb.rylx}</span></li>
+     <li><label class="label_name">上证城市：</label><span class="jt_content">${nb.szcs}</span></li>
+     <li><label class="label_name">是否过户：</label><span class="jt_content">${nb.sfgh}</span></li>
     </ul>
+
     <div class="Query_results_title">投保信息（报价详细）</div>
+       <#list xz as xxz>
       <ul class="Insured_inquiry_info clearfix">
-       <li><label class="label_name">交强险：</label><div class="jt_content">投保 <span class="time">生效时间：2017-2-11 12时</span><span class="cost">保费：￥321</span></div></li>
-       <li><label class="label_name">车船税：</label><div class="jt_content">正常缴纳 </div></li>
+       <li><label class="label_name">${xxz.xzmc}：</label><div class="jt_content">
+               <#if xxz.istrue=='1'&&xxz.xzmc!='车船税'>投保111
+                   <span class="time">起保时间:${xxz.qbsj}</span>
+                   <span class="cost">保费：￥${xxz.bxje}</span>
+               </#if>
+               <#if xxz.istrue!='1'&&xxz.xzmc!='车船税'>未投保111
+               </#if>
+               <#if xxz.xzmc=='车船税'&&xxz.istrue!='1'>
+                   未缴纳
+               </#if>
+               <#if xxz.xzmc=='车船税'&&xxz.istrue=='1'>
+                   正常缴纳
+               </#if>
+           </div>
+       </li>
+
+       <#--<li><label class="label_name">${xxz.xzmc}：</label><div class="jt_content">
+               <#if xxz.istrue=='1'>正常缴纳111</#if>
+               <#if xxz.istrue!='1'>未缴纳111</#if>
+           </div>
+       </li>
+
        <li class="comm_insurance">
-         <div class="clearfix"><label class="label_name">商业险：</label><div class="jt_content">投保 <span class="time">生效时间：2017-2-11 12时</span><span class="cost">保费：￥1234</span> </div>
-         </div>
+         <div class="clearfix"><label class="label_name">${xxz.xzmc}：</label>
+             <div class="jt_content">
+                 <#if xxz.istrue=='1'>投保111
+                     <span class="time">起保时间:${xxz.qbsj}</span>
+                     <span class="cost">保费：￥${xxz.bxje}</span>
+                 </#if></div>
+         </div>-->
+          <li class="comm_insurance">
+       </#list>
           <table cellpadding="0" cellspacing="0" class="insurance_style" width="100%">
           <thead>
            <tr>
@@ -297,50 +327,31 @@
            </tr>
           </thead>
           <tbody>
+          <#list nx as nx>
            <tr>
-            <td>第三方责任险</td>
+            <td>${nx.xzmc}</td>
             <td>足额投保</td>
-            <td>234</td>
+            <td>￥${nx.bxje}</td>
            </tr>
-           <tr>
-            <td>涉水行驶损失险</td>
-            <td>足额投保</td>
-            <td>123</td>
-           </tr>
-           <tr>
-            <td>车身划痕损失险</td>
-            <td>足额投保</td>
-            <td>431</td>
-           </tr>
-           <tr>
-            <td>车辆损失险</td>
-            <td>足额投保</td>
-            <td>232</td>
-           </tr>
-           <tr>
-            <td>车辆损失险</td>
-            <td>足额投保</td>
-            <td>111</td>
-           </tr>
+          </#list>
           </tbody>
         </table>
         <div class="clearfix Non-deductible marginsx">
            <label class="label_name">不计免赔：</label>
              <div class="jt_content">
-              <span class="name">车辆损失险</span>
-              <span class="name">车身划痕损失险</span>
-              <span class="name">涉水行驶损失险</span>
-              <span class="name">涉水行驶损失险</span>
-              <span class="name">涉水行驶损失险</span>
-              <span class="name">涉水行驶损失险</span>             
-            </div>
-            <span class="cost">保费：￥2341</span> 
+                <#list bjmp as bj>
+                 <span class="name">
+                      ${bj.xzmc}
+                 </span>
+                </#list>
+             </div>
+            <span class="cost">保费：￥${zongjia.zbf}</span>
             </div>
          </li>      
       </ul>
     </div>
     <!--保费统计-->
-    <div class="Premium_statistics">保费总计：￥<b>3456</b>元/年</div>
+    <div class="Premium_statistics">保费总计：￥<b>${zje.zj}</b>元/年</div>
  </div>
 
 </div>

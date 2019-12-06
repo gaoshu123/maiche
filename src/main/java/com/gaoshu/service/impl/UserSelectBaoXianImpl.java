@@ -18,10 +18,10 @@ public class UserSelectBaoXianImpl implements UserSelectBaoXian {
     @Autowired
     private BaoXianMapper bxm;
     //查询所有保险订单
-    public List<BaoXianDingDan> selectAllBaoXian(){
+   /* public List<BaoXianDingDan> selectAllBaoXian(){
         System.out.println("1");
         return bxm.selectAll();
-    }
+    }*/
 
     //根据ID查询保险订单
     public List<BaoXianDingDan>  selectBXDD(User uid){
@@ -36,7 +36,7 @@ public class UserSelectBaoXianImpl implements UserSelectBaoXian {
 
     //根据用户ID查询保险公司信息
     public BaoXianGongSi selectBaoXianGS(BaoXianDingDan bxddid){
-
+        System.out.println("到Impl层了");
         return bxm.selectBaoXianGS(bxddid);
     }
 
@@ -48,6 +48,35 @@ public class UserSelectBaoXianImpl implements UserSelectBaoXian {
     //保单详情
     public  BaoDanXinXi selectBaoDan(BaoDanXinXi bdxx){
         return bxm.selectBaoDan(bdxx);
+    }
+
+
+    //根据订单号查询交强险，车船税，商业险
+    public List<XianZhong> selectXianZhongByDdid(Integer bxddid){
+        return bxm.selectXianZhongByDdid(bxddid);
+    }
+
+    //除了交强险，车船险，商业险其他全查。
+    public List<XianZhong> notLikeSelectXZ(Integer bxddid){
+
+        return bxm.notLikeSelectXZ(bxddid);
+    }
+
+
+    //除了3险之外的总费用
+    public XianZhong selectSumZfy(Integer bxddid){
+        return bxm.selectSumZfy(bxddid);
+    }
+
+    //除了3险之外，查询不计免赔的有哪些
+    public List<XianZhong>  selectMianPei(Integer bxddid){
+        return bxm.selectMianPei(bxddid);
+    }
+
+
+    //所有缴纳险种的总费用
+    public XianZhong selectZj(Integer bxddid){
+        return bxm.selectZj(bxddid);
     }
 
 }
